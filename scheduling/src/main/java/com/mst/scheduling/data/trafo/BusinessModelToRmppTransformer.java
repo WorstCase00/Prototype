@@ -21,8 +21,6 @@ import com.google.common.collect.Sets;
 import com.google.common.math.DoubleMath;
 import com.mst.graph.DirectedAcyclicGraphJGraphTImpl;
 import com.mst.graph.IDirectedAcyclicGraph;
-import com.mst.scheduling.algorithm.rmpp.ListPriorizationFunction;
-import com.mst.scheduling.algorithm.rmpp.RoadmapProjectStage;
 import com.mst.scheduling.data.business.BusinessDomainModel;
 import com.mst.scheduling.data.business.IEmployee;
 import com.mst.scheduling.data.business.IEpic;
@@ -34,6 +32,7 @@ import com.mst.scheduling.data.business.ITeam;
 import com.mst.scheduling.data.business.IWorkLoad;
 import com.mst.scheduling.data.business.SkillLevel;
 import com.mst.scheduling.data.rmpp.IMultiResource;
+import com.mst.scheduling.data.rmpp.IPlanningCycleDefinition;
 import com.mst.scheduling.data.rmpp.IPriorizationFunction;
 import com.mst.scheduling.data.rmpp.IProjectNetwork;
 import com.mst.scheduling.data.rmpp.IResourceGroup;
@@ -41,20 +40,31 @@ import com.mst.scheduling.data.rmpp.IRoadmapProblem;
 import com.mst.scheduling.data.rmpp.IRoadmapProject;
 import com.mst.scheduling.data.rmpp.IRoadmapProjectRelation;
 import com.mst.scheduling.data.rmpp.IRoadmapProjectStage;
+import com.mst.scheduling.data.rmpp.ByIdPriorizationFunction;
 import com.mst.scheduling.data.rmpp.MultiResource;
 import com.mst.scheduling.data.rmpp.ProjectNetwork;
 import com.mst.scheduling.data.rmpp.ResourceGroup;
 import com.mst.scheduling.data.rmpp.RoadmapProblem;
 import com.mst.scheduling.data.rmpp.RoadmapProject;
 import com.mst.scheduling.data.rmpp.RoadmapProjectRelation;
+import com.mst.scheduling.data.rmpp.RoadmapProjectStage;
+import com.mst.scheduling.data.rmpp.WeeklyPlanningCycle;
 
 public class BusinessModelToRmppTransformer {
+	
+	private static IPlanningCycleDefinition DEFAULT_PLANNING_CYCLE_DEF =
+			new WeeklyPlanningCycle(2);
 	
 	public static final IRoadmapProblem createRoadmapProblem(BusinessDomainModel businessDomainModel) {
 		Set<IResourceGroup> resourceGroups = createResourceGroups(businessDomainModel.getTeams());
 		IProjectNetwork projectNetwork = createProjectNetwork(businessDomainModel);
-		IPriorizationFunction priorizationFunction = new ListPriorizationFunction();
-		IRoadmapProblem instance = new RoadmapProblem(projectNetwork.getVertexSet(), resourceGroups, priorizationFunction, projectNetwork);
+		IPriorizationFunction priorizationFunction = new ByIdPriorizationFunction();
+		IRoadmapProblem instance = new RoadmapProblem(
+				projectNetwork.getVertexSet(), 
+				resourceGroups, 
+				priorizationFunction, 
+				projectNetwork,
+				DEFAULT_PLANNING_CYCLE_DEF);
 		return instance;
 	}
 
@@ -71,7 +81,7 @@ public class BusinessModelToRmppTransformer {
 		
 		Set<IRoadmapProjectRelation> relations = createRoadmapProjectRelations(storyToProjectMap, businessDomainModel.getStoryRelations());
 		for(IRoadmapProjectRelation relation : relations) {
-			dag.addEdge(relation.getSource(), relation.getTarget(), relation);
+			dag.addEdge(relation.getSource(), relation.getDepending(), relation);
 		}
 		
 		IDirectedAcyclicGraph<IRoadmapProject, IRoadmapProjectRelation> graph = new DirectedAcyclicGraphJGraphTImpl<IRoadmapProject, IRoadmapProjectRelation>(dag);

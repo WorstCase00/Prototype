@@ -1,4 +1,4 @@
-package com.mst.scheduling.algorithm.rmpp;
+package com.mst.scheduling.data.rmpp;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -6,10 +6,8 @@ import java.util.List;
 import java.util.Set;
 
 import com.google.common.collect.Lists;
-import com.mst.scheduling.data.rmpp.IPriorizationFunction;
-import com.mst.scheduling.data.rmpp.IRoadmapProject;
 
-public class ListPriorizationFunction implements IPriorizationFunction {
+public class ByIdPriorizationFunction implements IPriorizationFunction {
 
 	@Override
 	public IRoadmapProject getHighestPriorization(

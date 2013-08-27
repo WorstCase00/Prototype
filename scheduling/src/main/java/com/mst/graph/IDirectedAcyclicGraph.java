@@ -13,4 +13,8 @@ public interface IDirectedAcyclicGraph<T, V extends IDirectedEdge<T>> {
 	Set<T> getPredecessors(T activity);
 
 	Set<T> getVertexSet();
+
+	Set<V> getIncomingEdgesOf(T vertex);
+
+	Set<V> getOutgoingEdgesOf(T vertex);
 }

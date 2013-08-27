@@ -2,15 +2,13 @@ package com.mst.scheduling.data.rmpp;
 
 import java.util.Set;
 
-import com.mst.graph.AbstractSourceSinkGraph;
 import com.mst.graph.IDirectedAcyclicGraph;
-import com.mst.graph.ISourceSinkGraph;
 
 public class ProjectNetwork implements IProjectNetwork {
 	
 	private IRoadmapProject source;
 	private IRoadmapProject sink;
-	IDirectedAcyclicGraph<IRoadmapProject, IRoadmapProjectRelation> graph;
+	private IDirectedAcyclicGraph<IRoadmapProject, IRoadmapProjectRelation> graph;
 	
 	public ProjectNetwork(IRoadmapProject source, IRoadmapProject sink, IDirectedAcyclicGraph<IRoadmapProject, IRoadmapProjectRelation> graph) {
 		this.source = source;
@@ -55,4 +53,19 @@ public class ProjectNetwork implements IProjectNetwork {
 		return this.graph.getVertexSet();
 	}
 
+	public Set<IRoadmapProjectRelation> getDependents(IRoadmapProject project) {
+		return this.graph.getOutgoingEdgesOf(project);
+	}
+
+	@Override
+	public Set<IRoadmapProjectRelation> getIncomingEdgesOf(
+			IRoadmapProject project) {
+		return this.graph.getIncomingEdgesOf(project);
+	}
+
+	@Override
+	public Set<IRoadmapProjectRelation> getOutgoingEdgesOf(
+			IRoadmapProject project) {
+		return this.graph.getOutgoingEdgesOf(project);
+	}
 }

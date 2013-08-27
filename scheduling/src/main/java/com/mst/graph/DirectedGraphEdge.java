@@ -17,7 +17,7 @@ public class DirectedGraphEdge<T> implements IDirectedEdge<T> {
 	}
 
 	@Override
-	public T getTarget() {
+	public T getDepending() {
 		return target;
 	}
 

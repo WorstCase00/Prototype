@@ -8,15 +8,18 @@ public class RoadmapProblem implements IRoadmapProblem {
 	private final Set<IResourceGroup> resourceGroups;
 	private final IPriorizationFunction priorizationFunction;
 	private final IProjectNetwork projectNetwork;
+	private final IPlanningCycleDefinition planningCycleDefinition;
 	
 	public RoadmapProblem(Set<IRoadmapProject> roadmapProjects,
 			Set<IResourceGroup> resourceGroups,
 			IPriorizationFunction priorizationFunction,
-			IProjectNetwork projectNetwork) {
+			IProjectNetwork projectNetwork, 
+			IPlanningCycleDefinition planningCycleDefinition) {
 		this.roadmapProjects = roadmapProjects;
 		this.resourceGroups = resourceGroups;
 		this.priorizationFunction = priorizationFunction;
 		this.projectNetwork = projectNetwork;
+		this.planningCycleDefinition = planningCycleDefinition;
 	}
 
 	
@@ -40,10 +43,15 @@ public class RoadmapProblem implements IRoadmapProblem {
 		return this.projectNetwork.getPredecessors(project);
 	}
 
+	@Override
+	public IPlanningCycleDefinition getPlanningCycleDefinition() {
+		return this.planningCycleDefinition;
+	}
 
 	@Override
-	public Set<IRoadmapProject> getDependents(IRoadmapProject project) {
-		return this.projectNetwork.getSuccessors(project);
+	public Set<IRoadmapProjectRelation> getDependentRelations(
+			IRoadmapProject project) {
+		return this.projectNetwork.getOutgoingEdgesOf(project);
 	}
 
 }

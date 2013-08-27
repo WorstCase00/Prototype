@@ -7,6 +7,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -17,7 +20,10 @@ import com.mst.function.IDiscreteStepFunction;
 import com.mst.scheduling.data.business.IProjectStageSkill;
 import com.mst.scheduling.data.trafo.wpn.WorkAssignment;
 
-public class RoadMapSchedule implements IRoadmapSchedule {
+public class RoadmapSchedule implements IRoadmapSchedule {
+	
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(RoadmapSchedule.class);
 
 	private final IRoadmapProblem problem;
 	
@@ -27,7 +33,7 @@ public class RoadMapSchedule implements IRoadmapSchedule {
 	private final Map<IRoadmapProject, Integer> releaseTimesMap;
 	private final Map<IRoadmapProject, Integer> endTimsMap;
 	
-	public RoadMapSchedule(IRoadmapProblem problem) {
+	public RoadmapSchedule(IRoadmapProblem problem) {
 		this.problem = problem;
 		this.freeFunctionMap = initFreeFunctionMap(problem.getResourceGroups());
 		this.releaseTimesMap = initReleaseTimesMap(problem.getRoadmapProjects());
@@ -104,10 +110,18 @@ public class RoadMapSchedule implements IRoadmapSchedule {
 	@Override
 	public void endProject(IRoadmapProject project, int endTime) {
 		this.endTimsMap.put(project, endTime);
-		Set<IRoadmapProject> dependents = problem.getDependents(project);
-		for(IRoadmapProject dependent : dependents) {
-			Integer oldRelease = this.releaseTimesMap.get(dependent);
-			this.releaseTimesMap.put(dependent, Math.max(oldRelease, endTime));
+		updateReleaseTimes(project, endTime);
+	}
+
+	private void updateReleaseTimes(IRoadmapProject project, int endTime) {
+		LOGGER.debug("update release times for project {} with end time {}", project, endTime);
+		IPlanningCycleDefinition planningCycleDefinition = this.problem.getPlanningCycleDefinition();
+		Set<IRoadmapProjectRelation> relations = problem.getDependentRelations(project);
+		for(IRoadmapProjectRelation relation : relations) {
+			IRoadmapProject dependending = relation.getDepending();
+			Integer oldRelease = this.releaseTimesMap.get(dependending);
+			int newRelease = planningCycleDefinition.getNextCycleStart(endTime);
+			this.releaseTimesMap.put(dependending, Math.max(oldRelease, newRelease));
 		}
 	}
 
@@ -130,7 +144,5 @@ public class RoadMapSchedule implements IRoadmapSchedule {
 		Collections.sort(endTimeEntries, comparator);
 		return endTimeEntries.get(0).getValue();
 	}
-	
-	
 
 }

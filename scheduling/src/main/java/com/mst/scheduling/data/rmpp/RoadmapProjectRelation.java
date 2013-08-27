@@ -23,7 +23,7 @@ public class RoadmapProjectRelation implements IRoadmapProjectRelation {
 	}
 
 	@Override
-	public IRoadmapProject getTarget() {
+	public IRoadmapProject getDepending() {
 		return this.target;
 	}
 

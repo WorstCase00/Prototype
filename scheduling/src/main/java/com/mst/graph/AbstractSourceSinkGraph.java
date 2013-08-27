@@ -7,15 +7,15 @@ public abstract class AbstractSourceSinkGraph<T> implements ISourceSinkGraph<T, 
 
 	private final T startVertex;
 	private final T endVertex;
-	private final IDirectedAcyclicGraph<T, IDirectedEdge<T>> aonNetworkGraph;
+	private final IDirectedAcyclicGraph<T, IDirectedEdge<T>> graph;
 	
 	public AbstractSourceSinkGraph(
 			T source, 
 			T sink,
-			IDirectedAcyclicGraph<T, IDirectedEdge<T>> aonNetworkGraph) {
+			IDirectedAcyclicGraph<T, IDirectedEdge<T>> graph) {
 		this.startVertex = source;
 		this.endVertex = sink;
-		this.aonNetworkGraph = aonNetworkGraph;
+		this.graph = graph;
 	}
 
 	@Override
@@ -30,26 +30,36 @@ public abstract class AbstractSourceSinkGraph<T> implements ISourceSinkGraph<T, 
 
 	@Override
 	public Set<IDirectedEdge<T>> getEdges() {
-		return aonNetworkGraph.getEdges();
+		return graph.getEdges();
 	}
 
 	@Override
 	public IDirectedEdge<T> getEdge(T source, T target) {
-		return aonNetworkGraph.getEdge(source, target);
+		return graph.getEdge(source, target);
 	}
 
 	@Override
 	public Set<T> getSuccessors(T activity) {
-		return aonNetworkGraph.getSuccessors(activity);
+		return graph.getSuccessors(activity);
 	}
 
 	@Override
 	public Set<T> getPredecessors(T activity) {
-		return aonNetworkGraph.getPredecessors(activity);
+		return graph.getPredecessors(activity);
 	}
 
 	@Override
 	public Set<T> getVertexSet() {
-		return aonNetworkGraph.getVertexSet();
+		return graph.getVertexSet();
+	}
+
+	@Override
+	public Set<IDirectedEdge<T>> getIncomingEdgesOf(T vertex) {
+		return this.graph.getIncomingEdgesOf(vertex);
+	}
+
+	@Override
+	public Set<IDirectedEdge<T>> getOutgoingEdgesOf(T vertex) {
+		return graph.getOutgoingEdgesOf(vertex);
 	}
 }

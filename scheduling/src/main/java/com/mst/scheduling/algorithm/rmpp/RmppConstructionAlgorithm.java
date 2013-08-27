@@ -19,7 +19,7 @@ import com.mst.scheduling.data.rmpp.IResourceGroup;
 import com.mst.scheduling.data.rmpp.IRoadmapProblem;
 import com.mst.scheduling.data.rmpp.IRoadmapProject;
 import com.mst.scheduling.data.rmpp.IRoadmapSchedule;
-import com.mst.scheduling.data.rmpp.RoadMapSchedule;
+import com.mst.scheduling.data.rmpp.RoadmapSchedule;
 
 public class RmppConstructionAlgorithm {
 	
@@ -31,7 +31,7 @@ public class RmppConstructionAlgorithm {
 //		Set<IRoadmapProjectGroup> roadmapProjectGroups = problem.getRoadmapProjectGroups();
 		Set<IRoadmapProject> roadmapProjects = problem.getRoadmapProjects();
 		IPriorizationFunction priorizationFunction = problem.getPriorizationFunction();
-		IRoadmapSchedule schedule = new RoadMapSchedule(problem);
+		IRoadmapSchedule schedule = new RoadmapSchedule(problem);
 		IRoadmapScheduler scheduler = new RoadmapScheduler();
 		
 		Map<IRoadmapProject, Set<IRoadmapProject>> openPredecessorMap = initializeOpenPredecessorMap(problem);

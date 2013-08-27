@@ -1,9 +1,8 @@
-package com.mst.scheduling.algorithm.rmpp;
+package com.mst.scheduling.data.rmpp;
 
 import java.util.Map;
 
 import com.mst.scheduling.data.business.IProjectStageSkill;
-import com.mst.scheduling.data.rmpp.IRoadmapProjectStage;
 
 public class RoadmapProjectStage implements IRoadmapProjectStage {
 

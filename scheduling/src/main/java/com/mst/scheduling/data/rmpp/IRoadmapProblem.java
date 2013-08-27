@@ -12,7 +12,9 @@ public interface IRoadmapProblem {
 
 	Set<IRoadmapProject> getPrerequisites(IRoadmapProject project);
 
-	Set<IRoadmapProject> getDependents(IRoadmapProject project);
+	IPlanningCycleDefinition getPlanningCycleDefinition();
+
+	Set<IRoadmapProjectRelation> getDependentRelations(IRoadmapProject project);
 
 	
 }

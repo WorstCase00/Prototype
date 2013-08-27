@@ -36,10 +36,10 @@ public class RoadmapScheduler implements IRoadmapScheduler {
 			IRoadmapSchedule schedule) {
 		LOGGER.debug("schedule project {} with resource group {}", project, resourceGroup);
 		List<IRoadmapProjectStage> projectStages = project.getProjectStages();
-		int releaseTime = schedule.getReleaseTime(project);
+		int endTime = schedule.getReleaseTime(project);
 		for(IRoadmapProjectStage stage : projectStages) {
-			LOGGER.debug("schedule project stage {} with release time {}", projectStages, releaseTime);
-			int stageEnd = -1;
+			LOGGER.debug("schedule project stage {} with release time {}", projectStages, endTime);
+			int stageEnd = schedule.getReleaseTime(project);
 			Map<IMultiResource, Map<IProjectStageSkill, Double>> workAssignments = chooseWorkAssignments(stage, resourceGroup);
 			LOGGER.debug("chosen work assignment: {}", Joiner.on(",").join(workAssignments.entrySet()));
 			for(Entry<IMultiResource, Map<IProjectStageSkill, Double>> workAssignmentEntry : workAssignments.entrySet()) {
@@ -48,7 +48,7 @@ public class RoadmapScheduler implements IRoadmapScheduler {
 				for(Entry<IProjectStageSkill, Double> workDemandEntry : workTypeToDemandMap.entrySet()) {
 					Double demand = workDemandEntry.getValue();
 					IDiscreteStepFunction freeFunction = schedule.getFreeFunction(resource);
-					List<IDiscreteInterval> intervals = findEarliestIDiscreteIntervals(freeFunction, releaseTime, demand);
+					List<IDiscreteInterval> intervals = findEarliestIDiscreteIntervals(freeFunction, endTime, demand);
 					for(IDiscreteInterval interval : intervals) {
 						schedule.schedule(project, stage, resource, workDemandEntry.getKey(), interval);
 					}
@@ -58,9 +58,9 @@ public class RoadmapScheduler implements IRoadmapScheduler {
 					stageEnd = Math.max(stageEnd, intervals.get(intervals.size() - 1).getUpper());
 				}
 			}
-			releaseTime = stageEnd;
+			endTime = stageEnd;
 		}
-		schedule.endProject(project, releaseTime);
+		schedule.endProject(project, endTime);
 	}
 
 	private List<IDiscreteInterval> findEarliestIDiscreteIntervals(

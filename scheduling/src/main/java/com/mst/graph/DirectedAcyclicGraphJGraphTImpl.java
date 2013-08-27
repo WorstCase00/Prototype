@@ -6,7 +6,6 @@ import org.jgrapht.DirectedGraph;
 import org.jgrapht.Graphs;
 
 import com.google.common.collect.Sets;
-import com.mst.scheduling.data.mdtrtp.IActivity;
 
 public class DirectedAcyclicGraphJGraphTImpl<T, V extends IDirectedEdge<T>> implements IDirectedAcyclicGraph<T, V > {
 	
@@ -14,6 +13,7 @@ public class DirectedAcyclicGraphJGraphTImpl<T, V extends IDirectedEdge<T>> impl
 
 	public DirectedAcyclicGraphJGraphTImpl(
 			DirectedGraph<T, V> network) {
+		// TODO check acyclic
 		this.network = network;
 	}
 
@@ -33,24 +33,28 @@ public class DirectedAcyclicGraphJGraphTImpl<T, V extends IDirectedEdge<T>> impl
 	}
 
 	@Override
-	public Set<T> getSuccessors(T activity) {
-		return Sets.newHashSet(Graphs.successorListOf(network, activity));
+	public Set<T> getSuccessors(T vertex) {
+		return Sets.newHashSet(Graphs.successorListOf(network, vertex));
 	}
 
 	@Override
-	public Set<T> getPredecessors(T activity) {
-		return Sets.newHashSet(Graphs.predecessorListOf(network, activity));
+	public Set<T> getPredecessors(T vertex) {
+		return Sets.newHashSet(Graphs.predecessorListOf(network, vertex));
 	}
 
 	@Override
 	public Set<T> getVertexSet() {
 		return network.vertexSet();
 	}
-
-	public static IDirectedAcyclicGraph<IActivity, IDirectedEdge<IActivity>> wrap(
-			DirectedGraph<IActivity, IDirectedEdge<IActivity>> graph) {
-		// TODO: check if acyclic
-		return new DirectedAcyclicGraphJGraphTImpl<IActivity, IDirectedEdge<IActivity>>(graph);
+	
+	@Override
+	public Set<V> getIncomingEdgesOf(T vertex) {
+		return this.network.incomingEdgesOf(vertex);
+	}
+	
+	@Override
+	public Set<V> getOutgoingEdgesOf(T vertex) {
+		return this.network.outgoingEdgesOf(vertex);
 	}
 	
 }
