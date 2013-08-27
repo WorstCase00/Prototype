@@ -1,0 +1,49 @@
+Core Team	Tylor  Bagley 	32	none	02.01.2014 - 15.1.2014		3							3	1																					
+	Fabian  Lane 	32	none	02.01.2014 - 08.1.2014		2								3																					
+	Ferdie  Erschoff 	28	none												3	3	1			3		3						3							
+	Lucasta  Willey 	32	none												3	1	1			1		3						2							
+	Malinda  Sealis 	32	none												3	1				2		3						2	3						
+	Dominick  Rummel 	20	only Mon,Tue,Wed												2	2	1			3		3						1							
+	Bernice  Bashline 	32	none	01.02.2014-12.02.2014											2		3					1				3	1		3						
+	Panda  Mercer 	32	none												2		3					1				2	3		1						
+	Dummy Core 	32	none			3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3
+	Krystal  Wallick 	25	none												2		3					2				2			1						
+																																			
+Plugins Team	Leanne  Guess 	32	none			1				3	1																								
+	Roderick  Wilson 	32	none							2	3			1																					
+	Huey  Mitchell 	32	none															3	1			1				2									
+	Aaliyah  Staymates 	32	none															3	1			2				2									
+	Keturah  Ropes 	32	none															3	1			2													
+	Ernesta  Bratton 	32	none															2	3			1													
+	Whitaker  Rawls 	25	none																3							3	3								
+	Dummy Plugins	32	none			3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3
+	Sherley  Cram 	25	none															1	3							3	1								
+																																			
+Mobile Team	Janae  Dugger 	20	none	02.01.2014 - 08.1.2014			3	2	2																										
+	Samson  Schneider 	32	none				1	3	2																										
+	Bronte  Moore 	15	only Thu,Fri											3									3	1											
+	Charis  Larson 	32	none																				3	1											
+	Theodore  Stern 	32	none																				3	3	1		2								
+	Mordikai  Wallace 	32	none																				1	3											
+	Lavena  Dunlap 	32	none											1									1	2	3										
+	Kim  Smith 	32	none																					2	3										
+	Dummy Mobile	32	none			3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3
+	Deon  Baer 	38	none				1	1	1																3		2								
+																																			
+Content Team	Susie  Orbell 	32	none									3									1					1									
+	Sybella  Knapenberger 	20	none									2									1					2									
+	Sabina  Robinson 	20	none																		3														
+	Sheryl  David 	32	none	01.03.2014-20.03.2014																	3														
+	Henrietta  Agnes 	18	only Mon, Tue, Fri																		3														
+	Dummy Content	32	none			3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3
+	Belinda  Weldy 	32	none																		2														
+																																			
+Operations Team	Linnie  Elliott 	32	none																															3	
+	Fido  Little 	26	only Mon.Tue,Wed,Thu																															3	2
+	Stephany  Knapp 	32	none																															2	3
+																																			
+QA Team	Harvie  Queer 	32	none																											3	2	2	1		
+	Lindsie  Moberly 	20	none																											3	1	1	1		
+	Miranda  Coldsmith 	20	only Mon, Tue, Thu																												3	3	2		
+	Heidi  Young 	32	none																											1	1	1	3		
+	Jessi  Stroble 	25	none																											1	1	1	3		

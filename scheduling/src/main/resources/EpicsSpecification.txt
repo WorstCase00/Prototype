@@ -1,0 +1,88 @@
+E1	Basic idea inbox management		E1.S1	Adding and editing ideas			Inbox	Ideas, Basics		2,00									2,00		10,00			5,00		5,00		5,00				5,00	2,00	5,00	5,00	42,00		5,00	1,25	0,00	0,00	6,25				
+			E1.S2	Idea search	E1.S1		Inbox	Ideas, Search		1,00									1,00		15,00			5,00		5,00								3,00		28,00		5,00	1,25	0,00	0,00	6,25				
+			E1.S3	Idea tagging (basic)	E1.S1		Inbox	Ideas, Tags		1,00								1,00	2,00					2,00		2,00		5,00						2,00	2,00	13,00		1,75	0,50	0,00	0,00	2,25				
+			E1.S4	Idea tagging (advanced) - autocompletion	E1.S3	50%	Inbox	Ideas, Tags, Editing		2,00								1,00	3,00				5,00					3,00				3,00	1,00			12,00		2,00	0,00	0,00	0,00	2,00				
+			E1.S5	Idea grouping	E1.S1		Inbox	Ideas		1,00								1,00	2,00		3,00		10,00	2,00		1,00		10,00				4,00			2,00	32,00		6,00	0,50	0,00	0,00	6,50				
+			E1.S6	Navigator with filtering groups	E1.S5	50%	Inbox	Ideas, Filtering		1,00									1,00		5,00			3,00				8,00				2,00	2,00			20,00		3,25	0,75	0,00	0,00	4,00				
+E2	Idea Inbox visualization		E2.S1	Ideas overview dashboard - framework	E1.S1		Inbox	Ideas, Dashboards		2,00									2,00				10,00									2,00	2,00			14,00		2,50	0,00	0,00	0,00	2,50				
+			E2.S2	Idea activity stream visualization	E2.S1		Inbox	Ideas, Dashboards, Visualization		3,00								2,00	5,00				15,00										5,00			20,00		3,75	0,00	0,00	0,00	3,75				
+			E2.S3	Idea count dashboard widget	E2.S1		Inbox	Ideas, Visualization		0,50									0,50				3,00									1,00				4,00		0,75	0,00	0,00	0,00	0,75				
+			E2.S4	Ideas correlation analysis/related terms	E2.S1		Inbox	Ideas, Algorithms		2,00							1,00		3,00		5,00	30,00														35,00		8,75	0,00	0,00	0,00	8,75				
+			E2.S5	Idea correlation visualization widget	E2.S1		Inbox	Ideas, Visualization										3,00	3,00				10,00									2,00	2,00			14,00		2,50	0,00	0,00	0,00	2,50				
+E3	Advanced idea management		E3.S1	Merging multiple ideas	E1.S1		Inbox	Ideas		1,00									1,00		4,00			3,00		2,00		2,00				1,00		1,00		13,00		2,00	0,75	0,00	0,00	2,75				
+			E3.S2	Archiving/branching ideas	E1.S1		Inbox	Ideas		0,50									0,50		3,00			3,00		2,00		2,00				1,00		1,00		12,00		1,75	0,75	0,00	0,00	2,50				
+			E3.S3	Splitting ideas into multipe ideas	E1.S1		Inbox	Ideas		0,50									0,50		3,00			3,00				2,00				1,00		1,00		10,00		1,25	0,75	0,00	0,00	2,00				
+			E3.S4	Idea roots/history trace view	E1.S1		Inbox	Ideas		1,00								2,00	3,00		3,00		12,00	3,00				4,00				3,00		1,00		26,00		4,75	0,75	0,00	0,00	5,50				
+E4	Idea pipeline - Basic		E4.S1	Syntax and parser: text to canvas			Pipeline	Pipeline, Editing		1,00									1,00			5,00						10,00								15,00		3,75	0,00	0,00	0,00	3,75				
+			E4.S2	Idea canvas: basic layout engine			Pipeline	Pipeline, Canvas											0,00				10,00									2,00				12,00		2,50	0,00	0,00	0,00	2,50				
+			E4.S3	Idea canvas: configurable sections	E4.S2		Pipeline	Pipeline, Canvas, Customization		1,00									1,00				5,00					5,00								10,00		2,50	0,00	0,00	0,00	2,50				
+			E4.S4	Idea canvas: configurable styling/icons	E4.S2		Pipeline	Pipeline, Canvas, Styling, customization		1,00								2,00	3,00				5,00					3,00				2,00				10,00		2,00	0,00	0,00	0,00	2,00				
+			E4.S5	Ideas2Canvas and back: Switching	E4.S1, E4.S3		Pipeline	Pipeline, Canvas, Editing											0,00				3,00					3,00								6,00		1,50	0,00	0,00	0,00	1,50				
+			E4.S6	Basic pipeline control: Stages and idea advancement	E1.S1		Pipeline	Pipeline		2,00									2,00		5,00		5,00					15,00				2,00				27,00		6,25	0,00	0,00	0,00	6,25				
+			E4.S7	Canvas per pipeline stage	E4.S6, E4.S2		Pipeline	Pipeline, Canvas		0,50									0,50				5,00					2,00								7,00		1,75	0,00	0,00	0,00	1,75				
+			E4.S8	Workflow control 	E4.S6		Pipeline	Pipeline, Workflow		2,00								1,00	3,00		5,00		5,00					5,00								15,00		3,75	0,00	0,00	0,00	3,75				
+			E4.S9	Workflow/progress visualization	E4.S8	75%	Pipeline	Pipeline, Visualization		2,00								2,00	4,00				5,00					3,00				3,00				11,00		2,00	0,00	0,00	0,00	2,00				
+E5	Prioritization and decision making		E5.S1	Basic ranking per pipeline stage	E4.S7		Pipeline	Pipeline, Decisions		1,00							1,00		2,00		5,00		5,00									2,00				12,00		2,50	0,00	0,00	0,00	2,50				
+			E5.S2	custom ranking criteria with aggregation	E5.S1		Pipeline	Pipeline, Decisions		1,00							2,00	2,00	5,00		5,00	5,00	5,00													15,00		3,75	0,00	0,00	0,00	3,75				
+			E5.S3	Team ranking process	E5.S1		Pipeline	Pipeline, Decisions, Team		2,00							1,00	2,00	5,00		5,00		5,00									2,00	2,00			14,00		2,50	0,00	0,00	0,00	2,50				
+			E5.S4	Advanced criteria: Net present value	E5.S2		Pipeline	Pipeline, Decisions		1,00									1,00									8,00								8,00		2,00	0,00	0,00	0,00	2,00				
+			E5.S5	Advanced criteria: Real-options value	E5.S2		Pipeline	Pipeline, Decisions		2,00									2,00									8,00								8,00		2,00	0,00	0,00	0,00	2,00				
+			E5.S6	Advanced criteria: S-cruve	E5.S2		Pipeline	Pipeline, Decisions		2,00									2,00									8,00								8,00		2,00	0,00	0,00	0,00	2,00				
+			E5.S7	Advanced criteria: Balanced scorecards	E5.S2		Pipeline	Pipeline, Decisions		2,00								2,00	4,00				5,00					10,00				3,00				18,00		3,75	0,00	0,00	0,00	3,75				
+			E5.S8	Visual priorization matrix	E5.S1		Pipeline	Pipeline, Decisions, Visualization		2,00								2,00	4,00				15,00					3,00				3,00	2,00			23,00		4,50	0,00	0,00	0,00	4,50				
+			E5.S9	Configurable prioritization matrix axes	E5.S8		Pipeline	Pipeline, Decisions		1,00									1,00				2,00					5,00				1,00				8,00		1,75	0,00	0,00	0,00	1,75				
+			E5.S10	Commenting decisions	E5.S1		Pipeline	Pipeline, Decisions		0,50									0,50				2,00					5,00								7,00		1,75	0,00	0,00	0,00	1,75				
+			E5.S11	Decision baselines and change comparison	E5.S1		Pipeline	Pipeline, Decisions		3,00								2,00	5,00		5,00		5,00					11,00								21,00		5,25	0,00	0,00	0,00	5,25				
+			E6.S12	Decision gates	E5.S1		Pipeline	Pipeline, Decisions		2,00									2,00		7,00		1,00			2,00		8,00				2,00				20,00		4,50	0,00	0,00	0,00	4,50				
+E6	Idea enrichment - linking/adding content		E6.S1	Link confluence wiki pages			Pipeline	Pipeline, Content		1,00								1,00	2,00				5,00					5,00								10,00		2,50	0,00	0,00	0,00	2,50				
+			E6.S2	Add balsamiq mockups			Pipeline	Pipeline, Content		1,00								1,00	2,00				5,00					8,00								13,00		3,25	0,00	0,00	0,00	3,25				
+			E6.S3	Add HTML links, notes and free text			Pipeline	Pipeline, Content											0,00		1,00		3,00					3,00				3,00				10,00		1,75	0,00	0,00	0,00	1,75				
+E7	Innovation games		E7.S1	Placeholder - innovation games			Inbox	Ideas											0,00																	50,00		0,00	0,00	0,00	0,00	12,50				
+E8	Basic ressource planning and forecasting		E8.S1	Teams and ressources management			Roadmap	Roadmap, Ressources		1,00									1,00		2,00		8,00					5,00				3,00				18,00		3,75	0,00	0,00	0,00	3,75				
+			E8.S2	Stages and skills editing			Roadmap	Roadmap, Ressources		2,00									2,00		2,00		8,00					5,00				2,00				17,00		3,75	0,00	0,00	0,00	3,75				
+			E8.S3	Ressource planning view	E8.S1, E8.S2		Roadmap	Roadmap, Ressources		1,00									1,00				5,00					2,00				2,00				9,00		1,75	0,00	0,00	0,00	1,75				
+			E8.S4	Fixed scope/variable time planning	E8.S3		Roadmap	Roadmap, Ressources		0,50									0,50		2,00		1,00					5,00				1,00				9,00		2,00	0,00	0,00	0,00	2,00				
+			E8.S5	Fixed time/variable scope planning	E8.S3		Roadmap	Roadmap, Ressources		0,50									0,50		2,00		1,00					3,00								6,00		1,50	0,00	0,00	0,00	1,50				
+			E8.S6	Rough scoping mode	E8.S3		Roadmap	Roadmap, Ressources		2,00									2,00		1,00		3,00					5,00				5,00				14,00		2,25	0,00	0,00	0,00	2,25				
+			E8.S7	Manual preference planning	E8.S3		Roadmap	Roadmap, Ressources		1,00									1,00		1,00		3,00					3,00				2,00				9,00		1,75	0,00	0,00	0,00	1,75				
+			E8.S8	Capacity visualization	E8.S3		Roadmap	Roadmap, Ressources		1,00								4,00	5,00				12,00									3,00				15,00		3,00	0,00	0,00	0,00	3,00				
+			E8.S9	Basic optimization algorithm			Roadmap	Roadmap, Ressources, Algorithms											0,00			50,00														50,00		12,50	0,00	0,00	0,00	12,50				
+			E8.S10	Configurable optimization parameters	E8.S9	25%	Roadmap	Roadmap, Ressources, Customization		0,50									0,50			5,00						5,00				1,00				11,00		2,50	0,00	0,00	0,00	2,50				
+E9	Advanced ressource and scenario planning		E9.S1	Placeholder - Algorithm extensions	E8.S9		Roadmap	Roadmap											0,00																	30,00		0,00	0,00	0,00	0,00	7,50				
+			E9.S2	Placeholder - Advanced planning UI	E8		Roadmap	Roadmap											5,00																	50,00		0,00	0,00	0,00	0,00	12,50				
+E10	Talent management		E10.S1	Placeholder - Talent management	E8		Roadmap	Roadmap, Reporting, Team											10,00																	80,00		0,00	0,00	0,00	0,00	20,00				
+E11	Import/export of data		E11.S1	Excel import	E8		Roadmap	ImportExport		2,00									2,00																	20,00		0,00	0,00	0,00	0,00	5,00				
+			E11.S2	Excel export			Roadmap	ImportExport		1,00									1,00																	5,00		0,00	0,00	0,00	0,00	1,25				
+			E11.S3	Advanced import wizard w. data mapping	E11.S1		Roadmap	ImportExport		4,00									4,00																	20,00		0,00	0,00	0,00	0,00	5,00				
+			E11.S4	Powerpoint export	E8		Roadmap	ImportExport		1,00								3,00	4,00																	20,00		0,00	0,00	0,00	0,00	5,00				
+E12	Innovation catalyst - trend analysis		E12.S1	Placeholder - innovation catalyst - trend analysis			Catalyst	Trends, Algorithms		10,00									10,00																	80,00		0,00	0,00	0,00	0,00	20,00				
+E13	Innovation catalyst - social media integration		E13.S1	Placeholder - innovation catalyst - social media			Catalyst	SocialMedia, Trends		10,00									10,00																	100,00		0,00	0,00	0,00	0,00	25,00				
+E14	Integration with uservoice.com		E14.S1	Import and sync idea backlog and ranking	E1		Integrations	Integrations, Feedback, uservoice.com		4,00									4,00		2,00							15,00								17,00		4,25	0,00	0,00	0,00	4,25				
+			E14.S2	Integrate comments and history	E14.S1		Integrations	Integrations, Feedback, uservoice.com		2,00									2,00									10,00								10,00		2,50	0,00	0,00	0,00	2,50				
+			E14.S3	Create joint demo environment	E14.S2		Integrations	Integrations, Feedback, uservoice.com		2,00									2,00								15,00									15,00		3,75	0,00	0,00	0,00	3,75				
+E15	Innovation catalyst - integration with market research		E15.S1	Placeholder - market research			Integrations	Market Research		5,00									5,00																	60,00		0,00	0,00	0,00	0,00	15,00				
+E16	Business/strategy: R&D budgeting		E16.S1	Assign costs to ressources			Strategy	Strategy, Budget		3,00									3,00		5,00		15,00					10,00				3,00				33,00		7,50	0,00	0,00	0,00	7,50				
+			E16.S2	Cost report			Strategy	Strategy, Budget		3,00								1,00	4,00		2,00		10,00					10,00				2,00				24,00		5,50	0,00	0,00	0,00	5,50				
+			E16.S3	External and internal ressources budgeting			Strategy	Strategy, Budget		2,00									2,00		5,00		3,00					20,00				5,00				33,00		7,00	0,00	0,00	0,00	7,00				
+			E16.S4	Cost reporting dashboards			Strategy	Strategy, Budget		2,00								2,00	4,00				2,00													2,00		0,50	0,00	0,00	0,00	0,50				
+E17	Business/strategy: business dashboards		E17.S1	Placeholder - business dashboards			Strategy	Strategy, Dashboards											10,00																	30,00		0,00	0,00	0,00	0,00	7,50				
+E18	Team Dashboard Plugin		E18.S1	Basic team dashboard plugin and framework			Team	Team, Teamroom, Dashboards						5,00				3,00	8,00				10,00					5,00				5,00	5,00			25,00		3,75	0,00	0,00	0,00	3,75				
+			E18.S2	Task completion widget			Team	Team, Teamroom, Dashboards						2,00				1,00	3,00				5,00					3,00				2,00				10,00		2,00	0,00	0,00	0,00	2,00				
+			E18.S3	Roadmap overview			Team	Team, Teamroom, Dashboards						2,00				1,00	3,00				5,00					3,00				1,00				9,00		2,00	0,00	0,00	0,00	2,00				
+			E18.S4	Roadmap activity stream widget			Team	Team, Teamroom, Dashboards						2,00				1,00	3,00				10,00					3,00				1,00				14,00		3,25	0,00	0,00	0,00	3,25				
+			E18.S5	Team load visualization widget			Team	Team, Teamroom, Dashboards						1,00				1,00	2,00				5,00					3,00				1,00				9,00		2,00	0,00	0,00	0,00	2,00				
+E19	Business/strategy: Horizon model		E19.S1	Placeholder - horizon model			Strategy	Strategy, Horizons											10,00																	30,00		0,00	0,00	0,00	0,00	7,50				
+E20	Office/outlook integration		E20.S1	Placeholder - outlook integration			Integrations	Integrations, Office											10,00																	50,00		0,00	0,00	0,00	0,00	12,50				
+E21	Innovation controlling - value chain metrics		E21.S1	Placeholder - innovation controlling			Controlling	Controlling											15,00																	150,00		0,00	0,00	0,00	0,00	37,50				
+E22	Integrations with 3rd party apps		E22.S1	Integration framework/layer			Integrations	Integrations, Framework		5,00							10,00		15,00		30,00							10,00								40,00		10,00	0,00	0,00	0,00	10,00				
+			E22.S2	IBM Jazz Integration			Integrations	Integrations		3,00									3,00								10,00	20,00								30,00		7,50	0,00	0,00	0,00	7,50				
+			E22.S3	Google apps integration			Integrations	Integrations		3,00									3,00								10,00	20,00								30,00		7,50	0,00	0,00	0,00	7,50				
+			E22.S4	Tasktop integration			Integrations	Integrations		5,00									5,00								10,00	20,00								30,00		7,50	0,00	0,00	0,00	7,50				
+			E22.S5	Rally software integration			Integrations	Integrations		3,00									3,00								10,00	20,00								30,00		7,50	0,00	0,00	0,00	7,50				
+			E22.S6	Microsoft TFS integration			Integrations	Integrations		3,00									3,00								10,00	20,00								30,00		7,50	0,00	0,00	0,00	7,50				
+E23	Mobile client - iPad		E23.S1	Placeholder - iPad			Mobile	Mobile, iOS											20,00										80,00							80,00		0,00	0,00	0,00	20,00	20,00				
+			E23.S2	Placeholder - iPhone			Mobile	Mobile, iOS											5,00										30,00							30,00		0,00	0,00	0,00	7,50	7,50				
+E24	Mobile client - Android		E24.S1	Placeholder - Android tablets			Mobile	Mobile, Android											20,00											80,00						80,00		0,00	0,00	0,00	20,00	20,00				
+			E24.S2	Placeholder - Android smartphones			Mobile	Mobile, Android											5,00											30,00						30,00		0,00	0,00	0,00	7,50	7,50				
+E25	Mobile Client - Windows 8		E25.S1	Placeholder - windows 8 tables			Mobile	Mobile, Windows											20,00												80,00					80,00		0,00	0,00	0,00	20,00	20,00				
+E26	Rest API		E26.S1	Full rest-based API			API	API									10,00		20,00		20,00															20,00		5,00	0,00	0,00	0,00	5,00				
