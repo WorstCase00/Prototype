@@ -1,4 +1,4 @@
-package com.mst.scheduling.data.rmp;
+package com.mst.scheduling.data.rmpp;
 import static com.google.common.base.Preconditions.*;
 public class RoadmapProjectRelation implements IRoadmapProjectRelation {
 

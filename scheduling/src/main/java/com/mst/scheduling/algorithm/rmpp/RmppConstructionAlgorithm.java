@@ -14,12 +14,12 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.mst.scheduling.data.business.IProjectStageSkill;
-import com.mst.scheduling.data.rmp.IPriorizationFunction;
-import com.mst.scheduling.data.rmp.IResourceGroup;
-import com.mst.scheduling.data.rmp.IRoadmapProblem;
-import com.mst.scheduling.data.rmp.IRoadmapProject;
-import com.mst.scheduling.data.rmp.IRoadmapSchedule;
-import com.mst.scheduling.data.rmp.RoadMapSchedule;
+import com.mst.scheduling.data.rmpp.IPriorizationFunction;
+import com.mst.scheduling.data.rmpp.IResourceGroup;
+import com.mst.scheduling.data.rmpp.IRoadmapProblem;
+import com.mst.scheduling.data.rmpp.IRoadmapProject;
+import com.mst.scheduling.data.rmpp.IRoadmapSchedule;
+import com.mst.scheduling.data.rmpp.RoadMapSchedule;
 
 public class RmppConstructionAlgorithm {
 	

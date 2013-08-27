@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Set;
 
 import com.google.common.collect.Lists;
-import com.mst.scheduling.data.rmp.IPriorizationFunction;
-import com.mst.scheduling.data.rmp.IRoadmapProject;
+import com.mst.scheduling.data.rmpp.IPriorizationFunction;
+import com.mst.scheduling.data.rmpp.IRoadmapProject;
 
 public class ListPriorizationFunction implements IPriorizationFunction {
 

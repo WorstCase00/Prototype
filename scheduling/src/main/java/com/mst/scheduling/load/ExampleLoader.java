@@ -38,14 +38,15 @@ import com.mst.scheduling.data.business.IStory;
 import com.mst.scheduling.data.business.IStoryRelation;
 import com.mst.scheduling.data.business.ITeam;
 import com.mst.scheduling.data.business.IWorkLoad;
+import com.mst.scheduling.data.business.PredecessorRelation;
 import com.mst.scheduling.data.business.ProjectStage;
 import com.mst.scheduling.data.business.ProjectStageSkill;
 import com.mst.scheduling.data.business.SkillLevel;
 import com.mst.scheduling.data.business.Story;
 import com.mst.scheduling.data.business.Team;
 import com.mst.scheduling.data.business.WorkLoad;
-import com.mst.scheduling.data.rmp.IRoadmapProblem;
-import com.mst.scheduling.data.rmp.IRoadmapSchedule;
+import com.mst.scheduling.data.rmpp.IRoadmapProblem;
+import com.mst.scheduling.data.rmpp.IRoadmapSchedule;
 import com.mst.scheduling.data.trafo.BusinessModelToRmppTransformer;
 
 public class ExampleLoader {

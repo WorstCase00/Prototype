@@ -1,4 +1,4 @@
-package com.mst.scheduling.data.rmp;
+package com.mst.scheduling.data.rmpp;
 
 import java.util.ArrayList;
 import java.util.List;

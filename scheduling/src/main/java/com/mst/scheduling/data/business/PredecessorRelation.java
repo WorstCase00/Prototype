@@ -1,8 +1,8 @@
-package com.mst.scheduling.load;
+package com.mst.scheduling.data.business;
 
-import com.mst.scheduling.data.business.IStory;
-import com.mst.scheduling.data.business.IStoryRelation;
 import static com.google.common.base.Preconditions.*;
+
+
 public class PredecessorRelation implements IStoryRelation {
 
 	private final IStory predecessor;

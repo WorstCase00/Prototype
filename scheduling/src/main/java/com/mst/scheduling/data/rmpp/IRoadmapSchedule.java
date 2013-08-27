@@ -1,4 +1,4 @@
-package com.mst.scheduling.data.rmp;
+package com.mst.scheduling.data.rmpp;
 
 import com.mst.function.IDiscreteInterval;
 import com.mst.function.IDiscreteStepFunction;

@@ -33,20 +33,20 @@ import com.mst.scheduling.data.business.IStoryRelation;
 import com.mst.scheduling.data.business.ITeam;
 import com.mst.scheduling.data.business.IWorkLoad;
 import com.mst.scheduling.data.business.SkillLevel;
-import com.mst.scheduling.data.rmp.IMultiResource;
-import com.mst.scheduling.data.rmp.IPriorizationFunction;
-import com.mst.scheduling.data.rmp.IProjectNetwork;
-import com.mst.scheduling.data.rmp.IResourceGroup;
-import com.mst.scheduling.data.rmp.IRoadmapProblem;
-import com.mst.scheduling.data.rmp.IRoadmapProject;
-import com.mst.scheduling.data.rmp.IRoadmapProjectRelation;
-import com.mst.scheduling.data.rmp.IRoadmapProjectStage;
-import com.mst.scheduling.data.rmp.MultiResource;
-import com.mst.scheduling.data.rmp.ProjectNetwork;
-import com.mst.scheduling.data.rmp.ResourceGroup;
-import com.mst.scheduling.data.rmp.RoadmapProblem;
-import com.mst.scheduling.data.rmp.RoadmapProject;
-import com.mst.scheduling.data.rmp.RoadmapProjectRelation;
+import com.mst.scheduling.data.rmpp.IMultiResource;
+import com.mst.scheduling.data.rmpp.IPriorizationFunction;
+import com.mst.scheduling.data.rmpp.IProjectNetwork;
+import com.mst.scheduling.data.rmpp.IResourceGroup;
+import com.mst.scheduling.data.rmpp.IRoadmapProblem;
+import com.mst.scheduling.data.rmpp.IRoadmapProject;
+import com.mst.scheduling.data.rmpp.IRoadmapProjectRelation;
+import com.mst.scheduling.data.rmpp.IRoadmapProjectStage;
+import com.mst.scheduling.data.rmpp.MultiResource;
+import com.mst.scheduling.data.rmpp.ProjectNetwork;
+import com.mst.scheduling.data.rmpp.ResourceGroup;
+import com.mst.scheduling.data.rmpp.RoadmapProblem;
+import com.mst.scheduling.data.rmpp.RoadmapProject;
+import com.mst.scheduling.data.rmpp.RoadmapProjectRelation;
 
 public class BusinessModelToRmppTransformer {
 	

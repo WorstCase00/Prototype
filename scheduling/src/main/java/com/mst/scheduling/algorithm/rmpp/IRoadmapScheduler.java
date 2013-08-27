@@ -1,8 +1,8 @@
 package com.mst.scheduling.algorithm.rmpp;
 
-import com.mst.scheduling.data.rmp.IResourceGroup;
-import com.mst.scheduling.data.rmp.IRoadmapProject;
-import com.mst.scheduling.data.rmp.IRoadmapSchedule;
+import com.mst.scheduling.data.rmpp.IResourceGroup;
+import com.mst.scheduling.data.rmpp.IRoadmapProject;
+import com.mst.scheduling.data.rmpp.IRoadmapSchedule;
 
 public interface IRoadmapScheduler {
 

@@ -2,8 +2,8 @@ package com.mst.scheduling.data.trafo.wpn;
 
 import com.mst.function.IDiscreteInterval;
 import com.mst.scheduling.data.business.IProjectStageSkill;
-import com.mst.scheduling.data.rmp.IRoadmapProject;
-import com.mst.scheduling.data.rmp.IRoadmapProjectStage;
+import com.mst.scheduling.data.rmpp.IRoadmapProject;
+import com.mst.scheduling.data.rmpp.IRoadmapProjectStage;
 
 public class WorkAssignment {
 

@@ -19,11 +19,11 @@ import com.mst.function.DiscreteInterval;
 import com.mst.function.IDiscreteInterval;
 import com.mst.function.IDiscreteStepFunction;
 import com.mst.scheduling.data.business.IProjectStageSkill;
-import com.mst.scheduling.data.rmp.IMultiResource;
-import com.mst.scheduling.data.rmp.IResourceGroup;
-import com.mst.scheduling.data.rmp.IRoadmapProject;
-import com.mst.scheduling.data.rmp.IRoadmapProjectStage;
-import com.mst.scheduling.data.rmp.IRoadmapSchedule;
+import com.mst.scheduling.data.rmpp.IMultiResource;
+import com.mst.scheduling.data.rmpp.IResourceGroup;
+import com.mst.scheduling.data.rmpp.IRoadmapProject;
+import com.mst.scheduling.data.rmpp.IRoadmapProjectStage;
+import com.mst.scheduling.data.rmpp.IRoadmapSchedule;
 
 public class RoadmapScheduler implements IRoadmapScheduler {
 
